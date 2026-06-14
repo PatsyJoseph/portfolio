@@ -22,14 +22,14 @@ const mockProjects = [
     category: 'Frontend',
     shortDesc: 'The portfolio of the developer.',
     longDesc: 'A responsive portfolio of me, Patrick Joseph Napud. It contains an interactive slideshow with a built-in contact feature for visitors. Everything in this portfolio is hardcoded.',
-    tech: ['React', 'Redux Toolkit', 'Vanilla CSS Modules', 'Framer Motion', 'Vite'],
+    tech: ['React', 'Tailwind CSS', 'Vite'],
     features: [
       'Fluid page and responsive transitions',
       'Optimized image loading and blur placeholders',
       'Fully responsive, mobile-first design system',
     ],
-    demoLink: 'https://example.com',
-    githubLink: 'https://github.com'
+    demoLink: 'https://vercel.com/patzys-projects/portfolio',
+    githubLink: 'https://github.com/PatsyJoseph/portfolio'
   },
   {
     id: 3,
