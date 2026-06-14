@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>S
       <div className="navbar-container">
-        <a href="#" className="navbar-logo" aria-label="Alex Rivera Portfolio Home">
+        <a href="#" className="navbar-logo" aria-label="Patrick Napud Portfolio Home">
           <span>P</span>JN
         </a>
 
