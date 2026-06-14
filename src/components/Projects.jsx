@@ -51,6 +51,7 @@ const mockProjects = [
     id: 4,
     title: 'Freelance Graphic Designs',
     category: 'Design',
+    underDevelopment: true,
     shortDesc: 'A premium component library featuring dark mode and glassmorphism styling.',
     longDesc: 'Zenith is an open-source design library crafted to build web applications faster. It packages responsive layouts, dynamic modals, buttons, forms, and timelines, complete with theme overrides and cross-browser accessibility structures.',
     tech: ['Figma', 'HTML5', 'Vanilla CSS', 'Storybook'],
@@ -60,8 +61,8 @@ const mockProjects = [
       'Interactive Figma design assets provided',
       'Optimised lightweight bundle sizes (<12KB)'
     ],
-    demoLink: 'https://example.com',
-    githubLink: 'https://github.com'
+    demoLink: null,
+    githubLink: null
   }
 ];
 
@@ -100,8 +101,9 @@ export default function Projects({ onSelectProject }) {
           {filteredProjects.map(project => (
             <article
               key={project.id}
-              className="project-card glass-card"
-              onClick={() => onSelectProject(project)}
+              className={`project-card glass-card ${project.underDevelopment ? 'under-development' : ''}`}
+              onClick={() => !project.underDevelopment && onSelectProject(project)}
+              style={{ cursor: project.underDevelopment ? 'default' : 'pointer' }}
             >
               <div className="project-badge">{project.category}</div>
               <div className="project-card-content">
@@ -115,10 +117,18 @@ export default function Projects({ onSelectProject }) {
                     <span className="badge project-tech-badge">+{project.tech.length - 3} more</span>
                   )}
                 </div>
-                <button className="project-card-cta" aria-label={`View details for ${project.title}`}>
-                  View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </button>
+
+                {project.underDevelopment ? (
+                  <div className="under-development-note">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    Development of this Feature is Undergoing
+                  </div>
+                ) : (
+                  <button className="project-card-cta" aria-label={`View details for ${project.title}`}>
+                    View Details
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                )}
               </div>
             </article>
           ))}

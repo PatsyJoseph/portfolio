@@ -2,13 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import slide1 from '../assets/self_illustration.png';
 import slide2 from '../assets/self2.png';
 import slide3 from '../assets/self3.png';
-import slide4 from '../assets/self4.png';
 
 const slides = [
-  { src: slide1, alt: "Patrick Joseph Napud" },
-  { src: slide2, alt: "A Communicator" },
-  { src: slide3, alt: "Contributor" },
-  { src: slide4, alt: "Champion" }
+  { src: slide3, alt: "A Contributor" },
+  { src: slide2, alt: "A Communicatior" },
+  { src: slide1, alt: "and A Champion" }
 ];
 
 export default function Slideshow() {
