@@ -69,7 +69,7 @@ const mockProjects = [
 
 export default function Projects({ onSelectProject }) {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Artificial Intelligence', 'Frontend', 'Backend', 'Design'];
+  const categories = ['All', 'Artificial Intelligence', 'Frontend', 'Backend', 'Design', 'Fullstack'];
 
   const filteredProjects = filter === 'All'
     ? mockProjects
