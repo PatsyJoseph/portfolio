@@ -33,11 +33,11 @@ const mockProjects = [
   },
   {
     id: 3,
-    title: 'This is a placeholder',
-    category: 'Backend',
-    shortDesc: 'A lightweight and modular API routing engine with automated rate limiting.',
-    longDesc: 'Vortex is an API gateway engineered for speed. It aggregates queries, handles caching using standard key-value memory blocks, provides API usage rate limits, and routes load across microservices.',
-    tech: ['Node.js', 'Express', 'Redis', 'Docker', 'Jest', 'Supertest'],
+    title: 'DeCodeMe IT Personality Test',
+    category: 'Frontend',
+    shortDesc: 'An NLP-based AI Chatbot designed to to decode or decipher the personality, interests, and strengths of the user.',
+    longDesc: 'Users will provide answers limited to 200 characters, to three questions, specifically: “Which activity do you enjoy most?”, “What tool do you use the most?” and “Describe your ideal project?” The system will analyze these inputs using NLP techniques and classify them into one of several key ICT subfields.',
+    tech: ['Python', 'BeautifulSoupv4', 'Flutter'],
     features: [
       'Extremely low latency forwarding (<15ms overhead)',
       'IP-based token bucket rate limiting',
@@ -47,6 +47,7 @@ const mockProjects = [
     demoLink: 'https://example.com',
     githubLink: 'https://github.com'
   },
+
   {
     id: 4,
     title: 'Freelance Graphic Designs',
