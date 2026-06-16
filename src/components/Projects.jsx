@@ -5,7 +5,7 @@ const mockProjects = [
     id: 1,
     title: 'DeepDent: Periodontal Disease Detection',
     category: 'Artificial Intelligence',
-    underDevelopment: True,
+    underDevelopment: true,
     shortDesc: 'An AI built to detect potential gingivitis and periodontitis disease.',
     longDesc: 'Aether Analytics is an enterprise-grade analytics dashboard designed to help companies visualize server loads, active sessions, and database query executions. Using dynamic WebSockets and a clean Postgres backend, it renders thousands of data points at 60fps.',
     tech: ['Tensorflow', 'Python', 'Hugging Face', 'Roboflow'],
